@@ -1,0 +1,287 @@
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.veggies-container{
+    position: relative;
+}
+
+.veggies-banner{
+    width: 100%;
+    cursor: pointer;
+}
+
+.veggies-banner-desktop{
+    display: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.banner-buttons{
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-self: center;
+    gap: 5px;
+}
+
+.banner-buttons button:first-child{
+    background-color: rgb(228, 0, 43);
+}
+
+.banner-buttons button:hover{
+    background-color: rgb(228, 0, 43); 
+}
+
+.banner-buttons button{
+    padding: 6px;
+    cursor: pointer;
+    color: inherit;
+    border: 1px solid rgb(228, 0, 43);
+    border-radius: 100%;
+    background-color: transparent;
+}
+
+.blocks{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    position: absolute;
+    bottom: -20.5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.blocks div{
+    width: 25px;
+    height: 25px;
+    background-color: rgb(228, 0, 43);
+}
+
+.restaurant-num{
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    background-color: rgba(255, 255, 255, 0.743);
+}
+
+.restaurant-num h2{
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.restaurant-num p{
+    font-size: 16px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 22px;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 160px;
+    background-color: rgba(255, 255, 255, 0.743);
+}
+
+.cards-container{
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    max-width: 447px;    
+}
+
+.cards-container:hover{
+    transform: translateY(-15px);
+}
+
+.cards-container img, .name img{
+    width: 100%;
+}
+
+.card-description{
+    padding: 10px 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    position: absolute;
+    bottom: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 1px 1px 5px rgb(148, 148, 148);
+    width: 96%;
+    height: 190px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card-description h2, .name h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 22px;
+}
+
+.card-description p, .card-description-special p{
+    font-size: 14px;
+    color: rgb(41, 41, 41);
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card-description button{
+    background-color: rgb(228, 0, 43);
+    border: none;
+    padding: 13px 5px;
+    width: 250px;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.card-description button:active, .card-description button:hover{
+    background-color: rgb(151, 0, 28);
+}
+
+.card-description-special{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px 15px;
+    height: 190px;
+    margin-top: 11px;
+    border-top: 2px solid rgb(199, 199, 199);
+}
+
+.card-description-special a{
+    color: rgb(228, 0, 43);
+    font-style: italic;
+    cursor: default;
+}
+
+.name{
+    position: relative;
+}
+
+.name h2{
+    border: 2px solid black;
+    padding: 10px 15px;
+    width: max-content;
+    position: absolute;
+    background-color: white;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px 40px;
+    font-size: 11px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.others{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer p:first-child{     
+    text-align: center;
+    
+}
+
+footer p a{
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+footer p:first-child a:hover{
+    color: rgb(228, 0, 43);
+}
+
+.footer-squares{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.footer-squares div{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(228, 0, 43);
+}
+
+@media(min-width: 1100px){
+    .cards{
+        grid-template-columns: 1fr 1fr 1fr;
+    }   
+}
+
+@media (min-width: 750px) and (max-width: 1050px){
+    .cards{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(min-width: 750px){
+    .veggies-banner{
+        display: none;
+    }
+
+    .veggies-banner-desktop{
+        display: block;
+    }
+
+    .blocks{
+        bottom: -24px;
+    }
+
+    .cards{
+        display: grid;
+        gap: 20px;
+        align-items: start;
+        padding-inline: 40px;
+        margin-bottom: 40px;
+    }
+
+    .card-description{
+        position: static;
+        transform: none;
+        width: 100%;
+    }
+
+    .card-description-special{
+        box-shadow: 1px 1px 5px rgb(148, 148, 148);
+        margin: 0;
+    }
+}
